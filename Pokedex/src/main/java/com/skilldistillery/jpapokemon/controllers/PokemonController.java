@@ -13,10 +13,10 @@ public class PokemonController {
 	@Autowired
 	private PokemonDAO dao;
 	
-	@RequestMapping(path = {"/", "home.do"})
+	@RequestMapping(path = {'/', 'home.do'})
 	public String index(Model model) {
-		model.addAttribute("DEBUG", dao.findById(1));
-		return "index";
+		model.addAttribute('DEBUG', dao.findById(1));
+		return 'index';
 	}
 	
 	

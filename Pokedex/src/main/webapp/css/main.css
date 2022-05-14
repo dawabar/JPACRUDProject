@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+body {
+	background-color: lightgrey;
+}
+
+.header {
+	text-align: center;
+	vertical-align: middle;
+	background-color: lightblue;
+	height: 100px;
+	
+}
+
+.logo{
+     float:left;
+     width: 100px;
+     height:100px;
+     display:block;    
+}
+
+.formLabels {
+	width: 20%;
+	text-align: right;
+}

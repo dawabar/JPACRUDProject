@@ -22,7 +22,7 @@ class PokemonTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		emf = Persistence.createEntityManagerFactory("JPAPokemon");
+		emf = Persistence.createEntityManagerFactory('JPAPokemon');
 	}
 
 	@AfterAll
@@ -43,11 +43,11 @@ class PokemonTest {
 	}
 
 	@Test
-	@DisplayName("test basic pokemon mappings")
+	@DisplayName('test basic pokemon mappings')
 void test_Pokemon_enumerated_mapping() {
 		assertNotNull(pokemon);
 		assertNotNull(pokemon.getName());
-		assertEquals("Pikachu", pokemon.getName());
+		assertEquals('Bulbasaur', pokemon.getName());
 
 	}
 
