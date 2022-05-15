@@ -6,7 +6,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import com.skilldistillery.jpapokemon.entities.Pokemon;
@@ -43,5 +42,45 @@ public class PokemonDaoJpaImpl implements PokemonDAO {
 
 		return pokedex;
 	}
+
+	@Override
+	public Pokemon createPokemon(Pokemon pokemon) {
+		Boolean success = false;
+	        try {
+				// start the transaction
+				em.getTransaction().begin();
+				// write the customer to the database
+				em.persist(pokemon);
+				// update the "local" Customer object
+				em.flush();
+				// commit the changes (actually perform the operation)
+				em.getTransaction().commit();
+				
+				success = true;
+				
+			} catch (Exception e) {
+				success = false;
+			}
+	        
+	        if (success) {
+	        	return findById(pokemon.getId());
+	        } else {
+	        	return new Pokemon();
+	        }
+	}
+
+	@Override
+	public Pokemon updatePokemon() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Pokemon deletePokemon() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 
 }

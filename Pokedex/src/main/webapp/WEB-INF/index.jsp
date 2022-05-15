@@ -31,12 +31,11 @@
 			</form>
 			<form action="getPokemonByName.do" method="GET">
 				<label for="ndexSearch" class="formLabels">Find Pokemon By
-					Name:</label> <input type="text" name="ndexSearch" id="ndexSearch">
+					Name:</label> <input type="text" name="nameSearch" id="nameSearch">
 				<input type="submit" value="Search" />
 			</form>
-			<form action="getAllPokemon.do" method="GET">
-				<input type="submit" value="Show All Pokemon" />
-			</form>
+			<a href="getAllPokemon.do">Show All Pokemon</a>
+			<a href="newPokemon.do">Add New Pokemon</a>
 		</section>
 
 	</main>

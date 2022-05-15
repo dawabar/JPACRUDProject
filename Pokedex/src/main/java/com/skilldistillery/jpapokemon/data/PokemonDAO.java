@@ -13,5 +13,11 @@ public interface PokemonDAO {
 	List<Pokemon> findByName(String substring);
 
 	List<Pokemon> findAll();
+	
+	Pokemon createPokemon(Pokemon pokemon);
+	
+	Pokemon updatePokemon();
+	
+	Pokemon deletePokemon();
 
 }
